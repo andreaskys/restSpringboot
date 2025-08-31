@@ -1,12 +1,12 @@
 package br.com.andreas.request.converters;
 
-import br.com.andreas.exception.UnsupportedMathOperationException;
+import br.com.andreas.exception.ResourceNotFoundException;
 
     public class NumberConverter {
 
         public static Double convertToDouble(String strNumber) throws IllegalArgumentException {
 
-            if(strNumber == null || strNumber.isEmpty()) throw new UnsupportedMathOperationException("Please enter a numeric value");
+            if(strNumber == null || strNumber.isEmpty()) throw new ResourceNotFoundException("Please enter a numeric value");
             String number = strNumber.replace(",", ".");
             return Double.parseDouble(number);
         }

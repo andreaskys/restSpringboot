@@ -1,7 +1,7 @@
 package br.com.andreas.controllers;
 
 import br.com.andreas.math.SimpleMath;
-import br.com.andreas.exception.UnsupportedMathOperationException;
+import br.com.andreas.exception.ResourceNotFoundException;
 import br.com.andreas.request.converters.NumberConverter;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -19,7 +19,7 @@ public class MathController {
             @PathVariable("first") String first,
             @PathVariable("second") String second
     ) throws Exception {
-        if(!NumberConverter.isNumeric(first) || !NumberConverter.isNumeric(second)) throw new UnsupportedMathOperationException("Please enter a numeric value");
+        if(!NumberConverter.isNumeric(first) || !NumberConverter.isNumeric(second)) throw new ResourceNotFoundException("Please enter a numeric value");
         return math.sum(NumberConverter.convertToDouble(first) , NumberConverter.convertToDouble(second));
     }
 
@@ -29,7 +29,7 @@ public class MathController {
             @PathVariable("first") String first,
             @PathVariable("second") String second
     ) throws Exception {
-        if(!NumberConverter.isNumeric(first) || !NumberConverter.isNumeric(second)) throw new UnsupportedMathOperationException("Please enter a numeric value");
+        if(!NumberConverter.isNumeric(first) || !NumberConverter.isNumeric(second)) throw new ResourceNotFoundException("Please enter a numeric value");
         return math.sub(NumberConverter.convertToDouble(first) ,  NumberConverter.convertToDouble(second));
     }
 
@@ -39,7 +39,7 @@ public class MathController {
             @PathVariable("first") String first,
             @PathVariable("second") String second
     ) throws Exception {
-        if(!NumberConverter.isNumeric(first) || !NumberConverter.isNumeric(second)) throw new UnsupportedMathOperationException("Please enter a numeric value");
+        if(!NumberConverter.isNumeric(first) || !NumberConverter.isNumeric(second)) throw new ResourceNotFoundException("Please enter a numeric value");
         return math.div(NumberConverter.convertToDouble(first) , NumberConverter.convertToDouble(second));
     }
 
@@ -49,7 +49,7 @@ public class MathController {
             @PathVariable("first") String first,
             @PathVariable("second") String second
     ) throws Exception {
-        if(!NumberConverter.isNumeric(first) || !NumberConverter.isNumeric(second)) throw new UnsupportedMathOperationException("Please enter a numeric value");
+        if(!NumberConverter.isNumeric(first) || !NumberConverter.isNumeric(second)) throw new ResourceNotFoundException("Please enter a numeric value");
         return math.mult(NumberConverter.convertToDouble(first) , NumberConverter.convertToDouble(second));
     }
 
@@ -59,7 +59,7 @@ public class MathController {
             @PathVariable("first") String first,
             @PathVariable("second") String second
     ) throws Exception {
-        if(!NumberConverter.isNumeric(first) || !NumberConverter.isNumeric(second)) throw new UnsupportedMathOperationException("Please enter a numeric value");
+        if(!NumberConverter.isNumeric(first) || !NumberConverter.isNumeric(second)) throw new ResourceNotFoundException("Please enter a numeric value");
         return math.med(NumberConverter.convertToDouble(first) , NumberConverter.convertToDouble(second));
     }
 
@@ -69,7 +69,7 @@ public class MathController {
             @PathVariable("first") String first
     ) throws Exception {
         if(!NumberConverter.isNumeric(first))
-            throw new UnsupportedMathOperationException("Please enter a numeric value");
+            throw new ResourceNotFoundException("Please enter a numeric value");
         return math.sqr(NumberConverter.convertToDouble(first));
 
     }

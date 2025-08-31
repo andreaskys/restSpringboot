@@ -1,9 +1,5 @@
 package br.com.andreas.math;
 
-import br.com.andreas.exception.UnsupportedMathOperationException;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-
 public class SimpleMath {
 
 
