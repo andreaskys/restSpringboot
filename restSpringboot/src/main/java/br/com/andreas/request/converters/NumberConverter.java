@@ -1,0 +1,19 @@
+package br.com.andreas.request.converters;
+
+import br.com.andreas.exception.UnsupportedMathOperationException;
+
+    public class NumberConverter {
+
+        public static Double convertToDouble(String strNumber) throws IllegalArgumentException {
+
+            if(strNumber == null || strNumber.isEmpty()) throw new UnsupportedMathOperationException("Please enter a numeric value");
+            String number = strNumber.replace(",", ".");
+            return Double.parseDouble(number);
+        }
+
+        public static boolean isNumeric(String strNumber) {
+            if(strNumber == null || strNumber.isEmpty()) return false;
+            String number = strNumber.replace(",", "."); // BRL uses , to separate decimals
+            return number.matches("[-+]?[0-9]*\\.?[0-9]+");
+        }
+}
