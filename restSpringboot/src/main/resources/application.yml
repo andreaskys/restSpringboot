@@ -15,5 +15,5 @@
       open-in-view: false
   logging:
     level:
-      #root: WARN
+      root: INFO
       #br.com.andreas: DEBUG
