@@ -1,4 +1,4 @@
-package br.com.andreas;
+package br.com.andreas.unittests.mapper;
 import static br.com.andreas.mapper.ObjectMapper.parseListObjects;
 import static br.com.andreas.mapper.ObjectMapper.parseObject;
 import static org.junit.jupiter.api.Assertions.assertEquals;

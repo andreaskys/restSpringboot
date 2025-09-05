@@ -1,7 +1,8 @@
-package br.com.andreas.services;
+package br.com.andreas.unittests.services;
 
 import br.com.andreas.controllers.PersonController;
 import br.com.andreas.data.dto.PersonDTO;
+import br.com.andreas.exception.RequiredObjectIsNullException;
 import br.com.andreas.exception.ResourceNotFoundException;
 import static br.com.andreas.mapper.ObjectMapper.parseListObjects;
 import static br.com.andreas.mapper.ObjectMapper.parseObject;
@@ -42,6 +43,8 @@ public class PersonServices {
     }
 
     public PersonDTO create(PersonDTO person){
+
+        if(person == null)throw new RequiredObjectIsNullException();
         logger.info("Creating one person" );
         var entity = parseObject(person, Person.class);
         var dto = parseObject(repository.save(entity), PersonDTO.class);
@@ -50,6 +53,7 @@ public class PersonServices {
     }
 
     public PersonDTO update(PersonDTO person){
+        if(person == null)throw new RequiredObjectIsNullException();
         logger.info("Updating one person");
         Person entity = repository.findById(person.getId()).orElseThrow(()-> new ResourceNotFoundException("No records found for this Id"));
         entity.setFirstName(person.getFirstName());
