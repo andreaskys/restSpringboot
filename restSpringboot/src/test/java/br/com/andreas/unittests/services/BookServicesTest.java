@@ -4,6 +4,7 @@ import br.com.andreas.data.dto.BookDTO;
 import br.com.andreas.exception.RequiredObjectIsNullException;
 import br.com.andreas.model.Book;
 import br.com.andreas.repository.BookRepository;
+import br.com.andreas.services.BookServices;
 import br.com.andreas.unittests.mapper.mocks.MockBook;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

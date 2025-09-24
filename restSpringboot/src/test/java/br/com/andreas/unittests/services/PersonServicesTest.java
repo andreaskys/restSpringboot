@@ -4,6 +4,7 @@ import br.com.andreas.data.dto.PersonDTO;
 import br.com.andreas.exception.RequiredObjectIsNullException;
 import br.com.andreas.model.Person;
 import br.com.andreas.repository.PersonRepository;
+import br.com.andreas.services.PersonServices;
 import br.com.andreas.unittests.mapper.mocks.MockPerson;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

@@ -1,4 +1,4 @@
-package br.com.andreas.unittests.services;
+package br.com.andreas.services;
 
 import br.com.andreas.controllers.PersonController;
 import br.com.andreas.data.dto.PersonDTO;

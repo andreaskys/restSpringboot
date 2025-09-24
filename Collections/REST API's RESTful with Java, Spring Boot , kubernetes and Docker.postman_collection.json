@@ -1,0 +1,18 @@
+{
+	"info": {
+		"_postman_id": "c0046cd7-22a6-4b61-8d72-b6d7fb8bc2e0",
+		"name": "REST API's RESTful with Java, Spring Boot , kubernetes and Docker",
+		"description": "REST API's RESTful with Java, Spring Boot , kubernetes and Docker",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "47146431",
+		"_collection_link": "https://andreaskys-8739742.postman.co/workspace/Andreas's-Workspace~f7134cbe-0e7b-4aef-84ce-2c1c48cb48f4/collection/47146431-c0046cd7-22a6-4b61-8d72-b6d7fb8bc2e0?action=share&source=collection_link&creator=47146431"
+	},
+	"item": [],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "http://localhost:8080",
+			"type": "string"
+		}
+	]
+}

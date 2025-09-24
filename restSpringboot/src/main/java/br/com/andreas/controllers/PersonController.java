@@ -2,7 +2,7 @@ package br.com.andreas.controllers;
 
 import br.com.andreas.controllers.docs.PersonControllerDocs;
 import br.com.andreas.data.dto.PersonDTO;
-import br.com.andreas.unittests.services.PersonServices;
+import br.com.andreas.services.PersonServices;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
