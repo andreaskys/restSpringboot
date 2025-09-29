@@ -49,5 +49,6 @@ public class BookController implements BookControllerDocs {
         service.delete(id);
         return ResponseEntity.noContent().build();
     }
+
 }
 

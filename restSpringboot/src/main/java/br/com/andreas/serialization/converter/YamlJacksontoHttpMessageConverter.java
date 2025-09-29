@@ -11,3 +11,4 @@ public final class YamlJacksontoHttpMessageConverter extends AbstractJackson2Htt
         super(new YAMLMapper().setSerializationInclusion(JsonInclude.Include.NON_NULL), MediaType.parseMediaType("application/yaml"));
     }
 }
+

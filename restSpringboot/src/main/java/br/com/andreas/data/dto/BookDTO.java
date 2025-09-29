@@ -18,6 +18,7 @@ public class BookDTO extends RepresentationModel<BookDTO> implements Serializabl
 
     public BookDTO(){
 
+
     }
 
     public long getId() {

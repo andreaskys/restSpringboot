@@ -78,4 +78,5 @@ public interface BookControllerDocs {
             }
     )
     ResponseEntity<?> delete(@PathVariable("id") Long id);
+
 }

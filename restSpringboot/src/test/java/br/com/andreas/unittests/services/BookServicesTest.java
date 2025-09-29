@@ -116,6 +116,7 @@ class BookServicesTest {
                         && link.getType().equals("GET"))
         );
 
+
         assertNotNull(result);
         assertNotNull(result.getId());
         assertNotNull(result.getLinks());

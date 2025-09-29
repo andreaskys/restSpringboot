@@ -40,4 +40,5 @@ public class AbstractIntegrationTest {
             environment.getPropertySources().addFirst(testcontainers);
         }
     }
+
 }

@@ -33,7 +33,7 @@ public class PersonController implements PersonControllerDocs {
         return service.findById(id);
     }
 
-//    @CrossOrigin(origins = {"http://localhost:8080"})
+    //    @CrossOrigin(origins = {"http://localhost:8080"})
     @PostMapping(produces = {MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE, MediaType.APPLICATION_YAML_VALUE}, consumes = {MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE, MediaType.APPLICATION_YAML_VALUE})
     @Override
     public PersonDTO create(@RequestBody PersonDTO person){
@@ -44,6 +44,12 @@ public class PersonController implements PersonControllerDocs {
     @Override
     public PersonDTO update(@RequestBody PersonDTO person){
         return service.update(person);
+    }
+
+    @PatchMapping(value = "/{id}", produces = {MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE, MediaType.APPLICATION_YAML_VALUE})
+    @Override
+    public PersonDTO disablePerson(@PathVariable("id") Long id) {
+        return service.disablePerson(id);
     }
 
     @DeleteMapping(value = "/{id}")

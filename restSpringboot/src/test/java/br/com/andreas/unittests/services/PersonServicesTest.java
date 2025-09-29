@@ -345,6 +345,7 @@ class PersonServicesTest {
                         && link.getType().equals("PUT"))
         );
 
+
         assertNotNull(personFour);
         assertNotNull(personFour.getId());
         assertNotNull(personFour.getLinks());

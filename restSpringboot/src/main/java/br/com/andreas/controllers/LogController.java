@@ -21,4 +21,5 @@ public class LogController {
         logger.error("testLog error");
         return "Logs generated successfully";
     }
+
 }

@@ -95,4 +95,5 @@ public class ObjectMapperTests {
         assertEquals("Address Test12", outputTwelve.getAddress());
         assertEquals("Male", outputTwelve.getGender());
     }
+
 }
